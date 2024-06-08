@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background: #1e1e1e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fly 3s infinite;
+}
+
+.head {
+  width: 25vmin;
+  aspect-ratio: 2/1.5;
+  background-color: white;
+  border-radius: 3.75vmin;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head > .face {
+  width: 18.75vmin;
+  aspect-ratio: 1.5/1;
+  background-color: #53668f;
+  border-radius: 1.75vmin;
+  gap: 5vmin;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head > .face > .eye {
+  width: 3vmin;
+  border-radius: 0.7vmin;
+  aspect-ratio: 1/2;
+  background-color: #22c5e6;
+}
+
+.head > .top {
+  position: absolute;
+  width: 13vmin;
+  height: 1.3vmin;
+  background-color: #22c5e6;
+  border-radius: 0 0 1vmin 1vmin;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.head > .earleft {
+  position: absolute;
+  transform: translateX(-50%);
+  margin-right: 25vmin;
+  border-radius: 1vmin 0 0 1vmin;
+  width: 2vmin;
+  aspect-ratio: 1/3;
+  background-color: #22c5e6;
+}
+.head > .earright {
+  position: absolute;
+  transform: translateX(50%);
+  margin-left: 25vmin;
+  border-radius: 0 1vmin 1vmin 0;
+  width: 2vmin;
+  aspect-ratio: 1/3;
+  background-color: #22c5e6;
+}
+
+.body {
+  position: relative;
+  background-color: white;
+  width: 17vmin;
+  aspect-ratio: 1/1;
+  border-radius: 0 0 50% 50%;
+}
+.body > .neck {
+  position: absolute;
+  transform: translateX(-50%);
+  width: 7vmin;
+  height: 1.3vmin;
+  background-color: #22c5e6;
+  border-radius: 0 0 1vmin 1vmin;
+  left: 50%;
+}
+.body > .spherel {
+  position: absolute;
+  transform: translateX(-50%);
+  translate: -100% 10%;
+  width: 5vmin;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.body > .spherer {
+  position: absolute;
+  transform: translateX(50%);
+  right: 0;
+  translate: 100% 10%;
+  width: 5vmin;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
